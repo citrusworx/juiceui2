@@ -44,6 +44,10 @@ footer {
     overflow-y: hidden;
 } */
 
+#canvas {
+    min-height: 100vh;
+}
+
 .shell {
     margin: 0 auto;
 }

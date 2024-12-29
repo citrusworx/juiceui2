@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Textbox(props) {
   return (
     <div>
@@ -11,4 +9,3 @@ function Textbox(props) {
   )
 }
 
-export default Textbox
