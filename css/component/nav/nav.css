@@ -1,37 +1,24 @@
-.nav\:strip.primary\:md {
-    height: 8vh;
+.navstrip {
+    height: 5vh;
     width: 100vw;
-    background-color: var(--primary);
     display: flex;
     flex: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
-.nav\:bar.primary\:md {
+.navbar {
     height: 10vh;
     width:100vwx;
-    background-color: var(--primary);
     display: flex;
     flex: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.nav\:bar.secondary\:md {
-    height: 10vh;
-    width: 100%;
-    background-color: var(--secondary);
-    display: flex;
-    flex: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.nav\:box.primary\:md {
+.navbox {
     height: 20vh;
     width: 100vw;
-    background-color: var(--primary);
     display: flex;
     flex: row;
     align-items: center;

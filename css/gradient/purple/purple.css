@@ -9,7 +9,7 @@
     --purple-pink-800: linear-gradient(90deg, hsl(280, 2%, 50%), hsl(340, 2%, 50%));
     --purple-pink-900: linear-gradient(90deg, hsl(280, 1%, 50%), hsl(340, 1%, 50%));
 
-    --grad-grape: linear-gradient(180deg, #462052 0%, #5A3466 25%, #6E487A 50%, #825C8E 75%, #9670A2 100%);
+    --grad-grape: linear-gradient(to bottom, #462052 0%, #5A3466 25%, #6E487A 50%, #825C8E 75%, #9670A2 100%);
     --grad-pomegranite: linear-gradient(180deg, #851140 0%, #992554 25%, #AD3968 50%, #C14D7C 75%, #D56190 100%);
     --grad-candy-grape: linear-gradient(180deg, #410392 0%, #5517A6 25%, #692BBA 50%, #7D3FCE 75%, #9153E2 100%);
 
@@ -26,11 +26,22 @@
     --grad-candy-grape-bt: linear-gradient(-180deg, #410392 0%, #5517A6 25%, #692BBA 50%, #7D3FCE 75%, #9153E2 100%);
 
     --grad-grim: linear-gradient(2deg, #623683, #764A97, #8A5EAB, #9E72BF, #B286D3 );
+    --grad-bright-purp: linear-gradient(to bottom, #5601FF, #4A00DE);
 
 }
 
-.bg\:grad\:down, .grape {
+.grad--bright-purple {
+    background: var(--grad-bright-purp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.grad--grape\[to-bot\] {
     background: var(--grad-grape);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .bg\:grad\:down, .pomegranite {

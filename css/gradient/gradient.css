@@ -3,6 +3,8 @@
 @import url('orange/orange.css');
 @import url('purple/purple.css');
 @import url('black/black.css');
+@import url('gray/gray.css');
+@import url('white/white.css');
 
 :root{
 
@@ -98,14 +100,21 @@
   background: var(--oceanspray);
 }
 
-.bg\:grad\:purp{
+.grad--warm-to-cold {
+  background: var(--warm-to-cold);
+}
+
+.grad--lilac\[43-deg\]
+{
   background-color: #4158D0;
   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
-.bg\:grad\:turq {
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+.grad--turq\[to-bot\] {
+  background: linear-gradient(to bottom, #0093E9, #80D0C7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .bg\:grad\:lav {

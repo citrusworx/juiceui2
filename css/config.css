@@ -27,8 +27,9 @@
 @import url('mobile/mobile.css'); /* Responsive Library 2 of 3 */
 @import url('tablet/tablet.css'); /* Responsive Library 3 of 3 */
 
-button {
-    overflow-y: auto;
+html, body {
+    height: 100%;
+    width: 100%;
 }
 
 table, tr, th {
@@ -44,9 +45,6 @@ footer {
     overflow-y: hidden;
 } */
 
-#canvas {
-    min-height: 100vh;
-}
 
 .shell {
     margin: 0 auto;
