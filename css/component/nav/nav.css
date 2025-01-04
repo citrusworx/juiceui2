@@ -24,3 +24,13 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+/* flex gap-3 space-between items-center justify-center */
+
+.nav {
+    display: flex;
+    gap: 3vw;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+}

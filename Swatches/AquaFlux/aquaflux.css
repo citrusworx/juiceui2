@@ -1,3 +1,12 @@
+@import url('./style/background.css');
+@import url('./style/border.css');
+@import url('./style/hover.css');
+@import url('./style/icon.css');
+@import url('./style/shadow.css');
+@import url('./style/state.css');
+@import url('./style/text.css');
+
+
 :root {
     --aqfx-primary: #23a3fb;
 

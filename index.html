@@ -10,7 +10,7 @@
     <div>
         <nav class="navstrip bgc-green-400">
             <div><span>Logo Text</span></div>
-            <ul class="flex gap-3 space-between items-center justify-center">
+            <ul class="nav">
                 <li class="korolev-rounded text:md">Link</li>
                 <li class="korolev-rounded text:md">Link</li>
                 <li class="korolev-rounded text:md">Link</li>
@@ -21,8 +21,8 @@
     </div>
     <main class="shell flex col items:center top w:90% h:full%" id="app-root">
         
-        <section class="container w:80% h:40% flex col items-start" id="hero-container">
-            <div class="flex col wrapper justify-center items-center w:90% h:full bgc-white-100 m:auto" id="text-box-wrapper">
+        <section class="container hero:dark" id="hero-container">
+            <div class=" wrapper hero:content" id="text-box-wrapper">
                 <h2 class="text:xlg tc-black-200">Heading</h2>
                 <p class="text:md text:justify">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptate alias, cum doloribus, fuga eveniet, architecto animi sint iste id nostrum quibusdam consequatur vel <span class="yellow:highlight" id="perf-definition">perferendis tempora</span> tempore non? Fugit maxime et libero. Quo enim voluptatem praesentium. Natus asperiores architecto veniam esse quod et, illum mollitia libero quas dolor at aperiam?
@@ -34,7 +34,7 @@
             </div>
         </section>
 
-        <section class="w:80% grad--white-down-100 container pb:rel:5">
+        <section class="container w:80% grad--white-down-100 pb:rel:5">
             <h2 class="heading padded">Form Maker</h2>
             <div class="w:half% container" id="containment">
                 <form action="" class="flex col">
@@ -121,7 +121,7 @@
             </div>
         </section>
         <section class="h:70% bgc-black-100 p:rel:10">
-            <p class="text:md">
+            <p class="text:md tc-aqfx-deep">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas accusantium odio, adipisci ducimus laboriosam deleniti eum error minima id, recusandae a possimus, repellendus quo cum temporibus qui veniam quae quidem nobis magnam? Accusantium perspiciatis suscipit ea repellat quas, nobis consequatur a, ratione magnam laborum eaque tempora ab error modi quisquam ipsum blanditiis non! Maiores modi totam molestiae eos illum magnam ducimus facere, repellat, itaque quasi, placeat rerum asperiores. Nesciunt saepe autem possimus dolorum perferendis, ratione itaque. Obcaecati, maiores? Ratione facere quibusdam eius eaque porro quidem accusamus ut corrupti voluptas qui dolorum impedit, magnam sapiente laudantium itaque tempora. Maxime, maiores dicta?
             </p>
         </section>
@@ -193,7 +193,7 @@
                         <i class="fas-solid table icon:sm icon:red-100"></i><span>Table</span>
                     </div>
                 </div>
-                <div class="w:full% h:half bgc-white-100 poppins" contenteditable=""></div>
+                <div class="w:full% h:half bgc-white-100 poppins ::focus" contenteditable=""></div>
             </div>
         </section>
     </main>

@@ -1,4 +1,4 @@
-/* State Styles */
+/* State Component Styles */
 
 .bg-alert, .bg\:alert {
     background-color: var(--danger);
@@ -23,3 +23,5 @@
 .danger {
     background-color: var(--danger);
 }
+
+/* State Styles */
