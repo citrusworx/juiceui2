@@ -1,0 +1,7 @@
+.toolbar {
+    display: flex;
+    height: 8vh;
+    gap: 0.5vw;
+    justify-content: center;
+    align-items: center;
+}

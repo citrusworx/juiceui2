@@ -243,6 +243,9 @@
 }
 
 /* SPACING */
+.gap\[10px\]{
+    gap: 10px;
+}
 
 .gap-1 {
     gap: 1vw;

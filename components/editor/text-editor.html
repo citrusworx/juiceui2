@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/juice.css">
+    <title>Text Editor Tool Bar</title>
+</head>
+<body>
+    <section class="pb:rel:10 mt:10">
+        <h3>WYSIWYG Editor</h3>
+        <div>
+            <label>Content</label><br />
+            <div class="toolbar bgc-white-500">
+                <div class="flex items-center justify-center gap[10px]">
+                    <i class="fas-solid addressbook icon:md icon:red-100"></i><span>Create Contact</span>
+                </div>
+                <div>
+                    |
+                </div>
+                <div>
+                    <form action="" class="flex gap[10px] items:center justify-center">
+                        <h3>Text Style: </h3>
+                        <select name="font-styles" id="font-styles" title="Font Styles">
+                            <option value="paragraph">Paragraph</option>
+                            <option value="paragraph">Subheading</option>
+                            <option value="paragraph">Heading</option>
+                            <option value="paragraph">Code</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="flex col items-center justify-center">
+                    <form action="" class="">
+                        <label for="font-color"><i class="fas-solid paint-roller icon:sm icon:red-100"></i>Font Color</label>
+                        <input type="color" name="font-color" id="font-color">
+                    </form>
+                </div>
+                <div>
+                    |
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid bold icon:sm icon:red-100"></i><span>Bold</span>
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid italic icon:sm icon:red-100"></i><span>Italic</span>
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid underline icon:sm icon:red-100"></i><span>Underline</span>
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid align-left icon:sm icon:red-100"></i><span>Left</span>
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid align-center icon:sm icon:red-100"></i><span>Center</span>
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid align-right icon:sm icon:red-100"></i><span>Right</span>
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid link icon:sm icon:red-100"></i><span>Hyperlink</span>
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid list icon:sm icon:red-100"></i><span>List</span>
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid clone icon:sm icon:red-100"></i><span>Copy</span>
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid paste icon:sm icon:red-100"></i><span>Paste</span>
+                </div>
+                <div>
+                    |
+                </div>
+                <div class="flex col items-center justify-center">
+                    <i class="fas-solid table icon:sm icon:red-100"></i><span>Table</span>
+                </div>
+            </div>
+            <div class="w:full% h:half bgc-white-100 poppins" contenteditable=""></div>
+        </div>
+    </section>
+</body>
+</html>
