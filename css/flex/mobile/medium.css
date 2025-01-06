@@ -1,7 +1,14 @@
 /* Medium Devices (Tablets in landscape & Phablets) */
-@media (min-width: 769px) and (max-width: 1024px) { 
+@media (min-width: 769px) and (max-width: 1024px) {
     /* Styles for tablets in landscape and phablets */
-    @import url('mobile.css');
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    div {
+      flex-wrap: wrap;
+    }
 
 .flex,.fl {
     display: flex;

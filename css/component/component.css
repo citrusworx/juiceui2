@@ -1,4 +1,5 @@
 @import url('hero/hero.css');
+@@import url("icon/icon.css");
 @import url('text/heading.css');
 @import url('text/editor.css');
 @import url('banner/banner.css');

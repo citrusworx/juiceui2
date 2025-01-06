@@ -1,15 +1,14 @@
 .navstrip {
     height: 5vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
-    flex: row;
     align-items: center;
     justify-content: space-around;
 }
 
 .navbar {
     height: 10vh;
-    width:100vwx;
+    width: 100vwx;
     display: flex;
     flex: row;
     align-items: center;
@@ -29,6 +28,8 @@
 
 .nav {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 3vw;
     justify-content: space-between;
     align-items: center;

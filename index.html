@@ -7,10 +7,10 @@
     <title>Juice2</title>
 </head>
 <body id="canvas" class="grad--grape[to-bot]" data-jc-theme="test">
-    <div>
-        <nav class="navstrip bgc-green-400">
+    <div class="w:full%">
+        <nav class="flex h:5 w:100 bgc-green-400 justify:between justify-around px:rel:10">
             <div><span>Logo Text</span></div>
-            <ul class="nav">
+            <ul class="flex gap-2 items-center justify-center">
                 <li class="korolev-rounded text:md">Link</li>
                 <li class="korolev-rounded text:md">Link</li>
                 <li class="korolev-rounded text:md">Link</li>
@@ -19,16 +19,16 @@
             </ul>
         </nav>
     </div>
-    <main class="shell flex col items:center top w:90% h:full%" id="app-root">
-        
+    <main class="shell flex col items:center top w:90%" id="app-root">
+
         <section class="container hero:dark" id="hero-container">
             <div class=" wrapper hero:content" id="text-box-wrapper">
-                <h2 class="text:xlg tc-black-200">Heading</h2>
-                <p class="text:md text:justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptate alias, cum doloribus, fuga eveniet, architecto animi sint iste id nostrum quibusdam consequatur vel <span class="yellow:highlight" id="perf-definition">perferendis tempora</span> tempore non? Fugit maxime et libero. Quo enim voluptatem praesentium. Natus asperiores architecto veniam esse quod et, illum mollitia libero quas dolor at aperiam?
+                <h2 class="text:xxxlg tc-black-200 p:rel:5">The Expressive, Extensive UI Library</h2>
+                <p class="text:md text:justify px:rel:2">
+                  Get a complete UI-building library complete with components, logic, and easter eggs---behind no pay wall! Everything we develop for Juice2 is completely <strong>free to use</strong>.
                 </p>
-                
-                <div class="m:auto w:40%">
+
+                <div class="m:auto w:40% py:rel:2 fw:no-wrap">
                     <button class="btn:flat rounded:md bgc-green-600 w:99% text:md h:99% korolev-rounded tc-black-700">Click Here</button>
                 </div>
             </div>
@@ -36,8 +36,8 @@
 
         <section class="container w:80% grad--white-down-100 pb:rel:5">
             <h2 class="heading padded">Form Maker</h2>
-            <div class="w:half% container" id="containment">
-                <form action="" class="flex col">
+            <div class="w:80% container" id="containment">
+                <form action="#" class="flex col">
                     <div class="the margin is five">
                         <div>
                             <h3>App Information</h3>
@@ -46,16 +46,16 @@
                             </p>
                         </div>
                         <div class="mt:5 wrapper">
-                            <label for="name-of-app">App Name <input type="text" name="app-name" id="app-name-field" data-jc-form="text-field"></label>   
+                            <label for="name-of-app">App Name</label> <input type="text" name="app-name" id="app-name-field" data-jc-form="text-field" title="App Name">
                         </div>
                     </div>
                     <div class="mt:5 wrapper">
-                        <label for="site-url">App URL <input type="url" name="site-url" id="app-url" data-jc-form="url-field"></label>
+                        <label for="site-url" title="App URL">App URL</label><input type="url" name="site-url" id="app-url" data-jc-form="url-field" title="App URL">
                         <div class="mt:5">
                             <p>Do you have a custom domain?</p>
-                            <fieldset>
-                                <label for="yes"><input type="radio" name="yesno" id="yes-radio"> Yes</label>
-                                <label for="no"><input type="radio" name="yesno" id="no-radio"> No</label>
+                            <fieldset class="w:full% flex grow-1 fw:wrap gap-1">
+                                <label for="yes">Yes </label><input type="radio" name="yesno" id="yes-radio" />
+                                <label for="no">No </label><input type="radio" name="yesno" id="no-radio" />
                             </fieldset>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                             </optgroup>
                         </select>
                     </div>
-                    <div class="mt:5 wrapper" id="server-options-container">
+                    <div class="mt:5 wrapper" id="location-options-container">
                         <h3>Server Location</h3>
                         <select title="location-options" id="location-select">
                             <optgroup label="Servers" id="location-options">
@@ -81,29 +81,32 @@
                             </optgroup>
                         </select>
                     </div>
-                    <div class="mt:10 p:rel:5">
+                    <div class="mt:10">
                         <h3>Contact Information</h3>
-                        <div class="my:3">
-                            <label for="name">Name <input type="text" name="fname" id="first-name-field" placeholder="First"> <input type="text" name="lname" id="last-name-field" placeholder="Last"></label>
+                        <div class="my:3 w:full% flex gap:1">
+                            <label for="name">Name</label>
+                              <input type="text" name="lname" id="last-name-field" placeholder="First" title"First Name">
+                              <input type="text" name="fname" id="first-name-field" placeholder="Last" title="Last Name">
                         </div>
-                        <div class="my:3 flex w:full">
+                        <div class="my:3 flex w:full%">
                             <label for="email">Email <input type="email" name="email" id="email-field" placeholder="yourname@domain.com"></label>
                         </div>
-                        <div class="my:3">
+                        <div class="my:3 w:full%">
                             <label for="phone">Phone Number <input type="tel" name="phone" id="phone-field" placeholder="555555555"></label>
                         </div>
-                        <div class="my:3 flex w:full">
+                        <div class="my:3 flex w:full%">
                             <label for="address">Address <input type="text" name="adress" id="address-field" placeholder="123 ABC St."></label>
                         </div>
                         <div class="my:3 flex items:center space-between w:full% gap:5">
                             <label for="city">City <input type="text" name="city" id="city-field" placeholder="Hollywood"></label>
                             <label for="state">State <input type="text" name="state" id="state-field" placeholder="Florida"></label>
-                        </div>
-                        <div class="my:3">
                             <label for="zipcode">Zipcode <input type="number" name="zipcode" id="zip-field" placeholder="12345" pattern="[0-9]{5}"></label>
                         </div>
+                        <div class="my:3">
+
+                        </div>
                     </div>
-                    <div class="mt:10 p:rel:5" id="billing-information">
+                    <div class="mt:10" id="billing-information">
                         <h3>Billing Information</h3>
                         <div class="flex fw-wrap w:80% gap:5">
                             <div class="mt:5">
@@ -120,84 +123,14 @@
                 </form>
             </div>
         </section>
-        <section class="h:70% bgc-black-100 p:rel:10">
-            <p class="text:md tc-aqfx-deep">
+        <section class="h:full% bgc-black-100 p:rel:10">
+            <p class="text:md tc-aqfx-deep grange-light h:full%">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas accusantium odio, adipisci ducimus laboriosam deleniti eum error minima id, recusandae a possimus, repellendus quo cum temporibus qui veniam quae quidem nobis magnam? Accusantium perspiciatis suscipit ea repellat quas, nobis consequatur a, ratione magnam laborum eaque tempora ab error modi quisquam ipsum blanditiis non! Maiores modi totam molestiae eos illum magnam ducimus facere, repellat, itaque quasi, placeat rerum asperiores. Nesciunt saepe autem possimus dolorum perferendis, ratione itaque. Obcaecati, maiores? Ratione facere quibusdam eius eaque porro quidem accusamus ut corrupti voluptas qui dolorum impedit, magnam sapiente laudantium itaque tempora. Maxime, maiores dicta?
             </p>
         </section>
-        <section class="pb:rel:10 mt:10">
-            <h3>WYSIWYG Editor</h3>
-            <div>
-                <label>Content</label><br />
-                <div class="toolbar bgc-white-500">
-                    <div class="flex items-center justify-center gap[10px]">
-                        <i class="fas-solid addressbook icon:md icon:red-100"></i><span>Create Contact</span>
-                    </div>
-                    <div>
-                        |
-                    </div>
-                    <div>
-                        <form action="" class="flex gap[10px] items:center justify-center">
-                            <h3>Text Style: </h3>
-                            <select name="font-styles" id="font-styles" title="Font Styles">
-                                <option value="paragraph">Paragraph</option>
-                                <option value="paragraph">Subheading</option>
-                                <option value="paragraph">Heading</option>
-                                <option value="paragraph">Code</option>
-                            </select>
-                        </form>
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <form action="" class="">
-                            <label for="font-color"><i class="fas-solid paint-roller icon:sm icon:red-100"></i>Font Color</label>
-                            <input type="color" name="font-color" id="font-color">
-                        </form>
-                    </div>
-                    <div>
-                        |
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid bold icon:sm icon:red-100"></i><span>Bold</span>
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid italic icon:sm icon:red-100"></i><span>Italic</span>
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid underline icon:sm icon:red-100"></i><span>Underline</span>
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid align-left icon:sm icon:red-100"></i><span>Left</span>
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid align-center icon:sm icon:red-100"></i><span>Center</span>
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid align-right icon:sm icon:red-100"></i><span>Right</span>
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid link icon:sm icon:red-100"></i><span>Hyperlink</span>
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid list icon:sm icon:red-100"></i><span>List</span>
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid clone icon:sm icon:red-100"></i><span>Copy</span>
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid paste icon:sm icon:red-100"></i><span>Paste</span>
-                    </div>
-                    <div>
-                        |
-                    </div>
-                    <div class="flex col items-center justify-center">
-                        <i class="fas-solid table icon:sm icon:red-100"></i><span>Table</span>
-                    </div>
-                </div>
-                <div class="w:full% h:half bgc-white-100 poppins ::focus" contenteditable=""></div>
-            </div>
-        </section>
+
     </main>
-    <script src="./script.js"></script> 
+    <script src="./script.js"></script>
     <script src="./css/highlight/highlight.js"></script>
 </body>
 </html>
