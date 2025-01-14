@@ -3,3 +3,7 @@ css/fonts/woff
 css/fonts/fontspace.css
 js/cc/node_modules
 js/cc/content.json
+js/cc/package.json
+node_modules/
+
+yarn.lock

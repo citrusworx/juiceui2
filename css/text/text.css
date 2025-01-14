@@ -1,3 +1,10 @@
+@import url('util/link.css');
+@import url('util/shadow.css');
+@import url('./mobile/small.css');
+@import url('./mobile/smedium.css');
+@import url('./mobile/medium.css');
+@import url('./mobile/large.css');
+
 h1, h2, h3, h4, h5, h6, th {
     font-family: "korolev", sans-serif;
     font-weight: 700;
@@ -87,14 +94,6 @@ h1, h2, h3, h4, h5, h6, th {
     text-align: justify;
 }
 
-.text\:color\:primary {
-    color: var(--primary);
-}
-
-.text\:color\:secondary {
-    color: var(--secondary);
-}
-
 .text-light,
 .text\:light
 {
@@ -140,11 +139,15 @@ h1, h2, h3, h4, h5, h6, th {
     KERNING STILES
 
 */
-.kern\:\.1 {
+.kern\:\.1,
+.kern-\.1
+{
     letter-spacing: .1rem;
 }
 
-.kern\:\.2 {
+.kern\:\.2
+.kern-\.2
+{
     letter-spacing: .2rem;
 }
 
@@ -182,54 +185,4 @@ h1, h2, h3, h4, h5, h6, th {
 
 .kern\:2 {
     letter-spacing: 2rem;
-}
-
-
-
-/* 
-
-    Link STYLES
-
-*/
-
-.link\:primary {
-    color: var(--orange-300);
-    text-decoration: none;
-}
-
-.link\:primary:active {
-    color: var(--orange-500);
-    text-decoration: none;
-}
-
-.link\:primary:hover {
-    color: var(--orange-700);
-    text-decoration: none;
-}
-
-.link\:primary:visited {
-    color: var(--creamsicle-200);
-    text-decoration: none;
-}
-
-.link\:light {
-    color: var(--white-200);
-    text-decoration: none;
-}
-
-.link\:light:hover {
-    color: var(--white-400);
-    text-decoration: none;
-}
-
-
-
-/* Shadow Stiles */
-
-.text\:shadow.md.light-blur {
-    text-shadow: 5px 3px 3px var(--black-200);
-}
-
-.text\:shadow.md.med-blur {
-    text-shadow: 3px 3px 2px var(--black-400);
 }

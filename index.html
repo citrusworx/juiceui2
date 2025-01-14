@@ -25,7 +25,7 @@
             <div class=" wrapper hero:content" id="text-box-wrapper">
                 <h2 class="text:xxxlg tc-black-200 p:rel:5">The Expressive, Extensive UI Library</h2>
                 <p class="text:md text:justify px:rel:2">
-                  Get a complete UI-building library complete with components, logic, and easter eggs---behind no pay wall! Everything we develop for Juice2 is completely <strong>free to use</strong>.
+                1   Get a complete UI-building library complete with components, logic, and easter eggs---behind no pay wall! Everything we develop for Juice2 is completely <strong>free to use</strong>.
                 </p>
 
                 <div class="m:auto w:40% py:rel:2 fw:no-wrap">
@@ -54,13 +54,13 @@
                         <div class="mt:5">
                             <p>Do you have a custom domain?</p>
                             <fieldset class="w:full% flex grow-1 fw:wrap gap-1">
-                                <label for="yes">Yes </label><input type="radio" name="yesno" id="yes-radio" />
-                                <label for="no">No </label><input type="radio" name="yesno" id="no-radio" />
+                                <label for="yes">Yes </label><input type="radio" name="yesno" id="yes-radio" title="Yes"/>
+                                <label for="no">No </label><input type="radio" name="yesno" id="no-radio" title="No" />
                             </fieldset>
                         </div>
                     </div>
                     <div class="mt:5 wrapper" id="server-options-container">
-                        <h3>Server Size</h3>
+                        <h3 class="">Server Size</h3>
                         <select title="server-options" id="server-select">
                             <optgroup label="Servers" id="server-options">
                                 <option value="">Pick a Server</option>
@@ -85,8 +85,8 @@
                         <h3>Contact Information</h3>
                         <div class="my:3 w:full% flex gap:1">
                             <label for="name">Name</label>
-                              <input type="text" name="lname" id="last-name-field" placeholder="First" title"First Name">
-                              <input type="text" name="fname" id="first-name-field" placeholder="Last" title="Last Name">
+                                <input type="text" name="lname" id="last-name-field" placeholder="First" title"First Name">
+                                <input type="text" name="fname" id="first-name-field" placeholder="Last" title="Last Name">
                         </div>
                         <div class="my:3 flex w:full%">
                             <label for="email">Email <input type="email" name="email" id="email-field" placeholder="yourname@domain.com"></label>
@@ -123,14 +123,23 @@
                 </form>
             </div>
         </section>
-        <section class="h:full% bgc-black-100 p:rel:10">
-            <p class="text:md tc-aqfx-deep grange-light h:full%">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas accusantium odio, adipisci ducimus laboriosam deleniti eum error minima id, recusandae a possimus, repellendus quo cum temporibus qui veniam quae quidem nobis magnam? Accusantium perspiciatis suscipit ea repellat quas, nobis consequatur a, ratione magnam laborum eaque tempora ab error modi quisquam ipsum blanditiis non! Maiores modi totam molestiae eos illum magnam ducimus facere, repellat, itaque quasi, placeat rerum asperiores. Nesciunt saepe autem possimus dolorum perferendis, ratione itaque. Obcaecati, maiores? Ratione facere quibusdam eius eaque porro quidem accusamus ut corrupti voluptas qui dolorum impedit, magnam sapiente laudantium itaque tempora. Maxime, maiores dicta?
-            </p>
-        </section>
+        <div class="row">
+            <div class="col bgc-green-400">
+                <p>Data One</p>
+                <fas-icon
+                  lib="solid"
+                  name="addressbook"
+                  color="icon:red-400"
+                  class="icon:md :hover-red-200"></fas-icon>
+            </div>
+            <div class="col bgc-blue-400">
+                <p>Data Two</p>
+            </div>
+        </div>
 
     </main>
     <script src="./script.js"></script>
     <script src="./css/highlight/highlight.js"></script>
+    <script src="./js/juice/icon.js"></script>
 </body>
 </html>
