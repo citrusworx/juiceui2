@@ -1,68 +1,69 @@
-// Bold Button
-const boldButton = document.getElementById('boldButton');
-const textEditor = document.getElementById('text-editor');
-// Italicize Button
-const italicButton = document.getElementById('italicButton');
-// Underline button
-const underlineButton = document.getElementById('underlineButton');
-// Justify Left button
-const justLeftButton = document.getElementById('justLeftButton');
-//
+document.addEventListener('DOMContentLoaded', () => {
+  // Toolbar Buttons and Text Editor
+  const boldButton = document.getElementById('boldButton');
+  const italicButton = document.getElementById('italicButton');
+  const underlineButton = document.getElementById('underlineButton');
+  const justLeftButton = document.getElementById('justLeftButton');
+  const justCenterButton = document.getElementById('justCenterButton');
+  const fontColorPicker = document.querySelector('input#font-color');
+  const highlightPicker = document.querySelector('input#font-color'); // Assuming ID for highlight
+  const textEditor = document.getElementById('text-editor');
 
-boldButton.addEventListener('click', () => {
-  if(!textEditor.classList.contains('bolded')){
-      boldButton.style.cursor = 'pointer';
-      textEditor.style.fontWeight = '700';
-      textEditor.classList.add('bolded');
-  }
-  else {
-    textEditor.style.fontWeight = '400';
-    textEditor.classList.remove('bolded');
-  }
-});
+  // Function: Apply Styles to Selected Text
+  function applyStyleToSelection(tag, className = '') {
+    const selection = window.getSelection();
 
-italicButton.addEventListener('click', () => {
-  if(!textEditor.classList.contains('italiced')){
-    textEditor.style.fontStyle = 'italic';
-    textEditor.classList.add('italiced');
-  }
-  else {
-    textEditor.style.fontStyle = 'normal';
-    textEditor.classList.remove('italiced');
-  }
-});
+    if (selection.rangeCount > 0) {
+      const range = selection.getRangeAt(0);
+      const wrapper = document.createElement(tag);
 
-underlineButton.addEventListener('click', () => {
-  if(!textEditor.classList.contains('underlinio')){
-    textEditor.style.textDecoration = 'underline';
-    textEditor.classList.add('underlinio');
-  }
-  else {
-    textEditor.style.textDecoration = 'none';
-    textEditor.classList.remove('underlinio');
-  }
-});
+      if (className) wrapper.className = className;
 
-justCenterButton.addEventListener('click', () => {
-  if(!textEditor.classList.contains('lefterized')){
-    textEditor.style.textAlign = 'left';
-    textEditor.classList.add('lefterized');
-  }
-  else
-    {
-        textEditor.style.textAlign = 'left';
-        textEditor.classList.remove('lefterized');
+        // Fallback: Wrap contents manually
+        const extractedContent = range.extractContents();
+        wrapper.appendChild(extractedContent);
+        range.insertNode(wrapper);
+      }
+
+      // Clear the selection
+      selection.removeAllRanges();
     }
-})
+  }
 
-justCenterButton.addEventListener('click', () => {
-  if(!textEditor.classList.contains('centerized')){
+  // Bold Button: Apply Bold Style
+  boldButton.addEventListener('click', () => {
+    applyStyleToSelection('span', 'font-bold');
+  });
+
+  // Italic Button: Apply Italic Style
+  italicButton.addEventListener('click', () => {
+    applyStyleToSelection('span', 'italic');
+  });
+
+  // Underline Button: Apply Underline Style
+  underlineButton.addEventListener('click', () => {
+    applyStyleToSelection('span', 'underline');
+  });
+
+  // Align Left Button
+  justLeftButton.addEventListener('click', () => {
+    textEditor.style.textAlign = 'left';
+  });
+
+  // Align Center Button
+  justCenterButton.addEventListener('click', () => {
     textEditor.style.textAlign = 'center';
-    textEditor.classList.add('centerized');
-  }
-  else
-    {
-    textEditor.style.textAlign = 'left';
-    textEditor.classList.remove('centerized');
-    }
-})
+  });
+
+  // Font Color Picker
+  fontColorPicker.addEventListener('input', (event) => {
+    const color = event.target.value;
+    applyStyleToSelection('span', '', { color });
+  });
+
+  // Highlight Picker
+  highlightPicker.addEventListener('input', (event) => {
+    const color = event.target.value;
+    applyStyleToSelection('span', '', { backgroundColor: color });
+  });
+});
