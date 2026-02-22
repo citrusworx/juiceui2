@@ -18,14 +18,17 @@
     --fire: linear-gradient(90deg, hsl(20, 100%, 50%), hsl(40, 100%, 50%));
     --forest: linear-gradient(90deg, hsl(120, 30%, 20%), hsl(120, 60%, 30%));
     --golden-hour: linear-gradient(90deg, hsl(30, 60%, 70%), hsl(40, 80%, 50%));
-    --pastel-rainbow: linear-gradient(90deg,
-                hsl(0, 100%, 50%), 
-                hsl(60, 100%, 50%), 
-                hsl(120, 100%, 50%), 
-                hsl(180, 100%, 50%), 
-                hsl(240, 100%, 50%), 
-                hsl(300, 100%, 50%), 
-                hsl(360, 100%, 50%));
+    --pastel-rainbow: linear-gradient(
+        90deg,
+        red 0%,
+        yellow 20%,
+        lime 40%,
+        cyan 60%,
+        blue 80%,
+        magenta 100%,
+        red 120%,
+        yellow 140%
+);
     --muted-rainbow: linear-gradient(
         90deg, 
         hsla(0, 100%, 50%, 0.7), 
@@ -59,7 +62,98 @@
 
 }
 
+/* Gradient Base Styles */
+[grad]{
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+[grad][text]{
+    background: var(--grad-active);
+    display: inline-block;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+[grad]:not([text])::before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    inset: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background: var(--grad-active);
+    border-radius: inherit;
+}
+
+/* [grad]::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  inset: 0;
+  z-index: -1;
+
+  background-repeat: no-repeat;
+  background: var(--grad-active);
+} */
+
+button[grad]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background: var(--grad-active);
+}
+
+body[grad]::before {
+  position: fixed;
+}
+
+/* Animation */
+[animation="flow"]::before{
+    background-size: 300% 100%;
+    animation: gradShiftX 3s linear infinite;
+}
+
+button[grad]:not([text])[animation="flow"]::before{
+    background-size: 800% 100%;
+    animation: gradShiftX 8s linear infinite;
+}
+
+[text][animation="flow"]{
+    background-size: 800% 100%;
+    animation: gradShiftX 8s linear infinite;
+}
+
+
+[animation="fall"]::before{
+    background-size: 300% 300%;
+    animation: gradShiftY 10s linear infinite;
+}
+
+@keyframes gradShiftX {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+@keyframes gradShiftY {
+    0% { background-position: 50% 0%; }
+    50% { background-position: 50% 100%; }
+    100% { background-position: 50% 0%; }
+}
+
 /* Special Colors */
+[grad="pastel-rainbow"]{
+    --grad-active: var(--pastel-rainbow);
+}
+
 .bg-pastel-rainbow {
   background: var(--pastel-rainbow);
 }

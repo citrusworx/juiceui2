@@ -11,18 +11,32 @@
 
     --grad-grape: linear-gradient(to bottom, #462052 0%, #5A3466 25%, #6E487A 50%, #825C8E 75%, #9670A2 100%);
     --grad-pomegranite: linear-gradient(180deg, #851140 0%, #992554 25%, #AD3968 50%, #C14D7C 75%, #D56190 100%);
+    --grad-pomegranite-bot: linear-gradient(to bottom, #851140 0%, #992554 25%, #AD3968 50%, #C14D7C 75%, #D56190 100%);
+    --grad-pomegranite-top: linear-gradient(to top, #851140 0%, #992554 25%, #AD3968 50%, #C14D7C 75%, #D56190 100%);
     --grad-candy-grape: linear-gradient(180deg, #410392 0%, #5517A6 25%, #692BBA 50%, #7D3FCE 75%, #9153E2 100%);
 
     --grad-grape-lr: linear-gradient(90deg, #462052 0%, #5A3466 25%, #6E487A 50%, #825C8E 75%, #9670A2 100%);
     --grad-pomegranite-lr: linear-gradient(90deg, #851140 0%, #992554 25%, #AD3968 50%, #C14D7C 75%, #D56190 100%);
-    --grad-candy-grape-lr: linear-gradient(90deg, #410392 0%, #5517A6 25%, #692BBA 50%, #7D3FCE 75%, #9153E2 100%);
+--grad-candy-grape-lr:
+    linear-gradient(
+        90deg,
+        #410392 0%,
+        #5517A6 25%,
+        #692BBA 50%,
+        #7D3FCE 75%,
+        #9153E2 100%,
+        #410392 125%,
+        #5517A6 150%,
+        #692BBA 175%,
+        #7D3FCE 200%
+);
 
     --grad-grape-rl: linear-gradient(-90deg, #462052 0%, #5A3466 25%, #6E487A 50%, #825C8E 75%, #9670A2 100%);
     --grad-pomegranite-rl: linear-gradient(-90deg, #851140 0%, #992554 25%, #AD3968 50%, #C14D7C 75%, #D56190 100%);
     --grad-candy-grape-rl: linear-gradient(-90deg, #410392 0%, #5517A6 25%, #692BBA 50%, #7D3FCE 75%, #9153E2 100%);
 
     --grad-grape-bt: linear-gradient(-180deg, #462052 0%, #5A3466 25%, #6E487A 50%, #825C8E 75%, #9670A2 100%);
-    --grad-pomegranite-bt: linear-gradient(-180deg, #851140 0%, #992554 25%, #AD3968 50%, #C14D7C 75%, #D56190 100%);
+    --grad-pomegranite-bt: linear-gradient(to bottom, #851140 0%, #992554 25%, #AD3968 50%, #C14D7C 75%, #D56190 100%);
     --grad-candy-grape-bt: linear-gradient(-180deg, #410392 0%, #5517A6 25%, #692BBA 50%, #7D3FCE 75%, #9153E2 100%);
 
     --grad-grim: linear-gradient(2deg, #623683, #764A97, #8A5EAB, #9E72BF, #B286D3 );
@@ -30,23 +44,57 @@
 
 }
 
-.grad--bright-purple {
-    background: var(--grad-bright-purp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+/* Base Purples */
+[grad="candy-grape"]{
+    --grad-active: var(--grad-candy-grape);
 }
 
-.grad--grape\[to-bot\] {
+[grad="grape"]{
+    --grad-active: var(--grad-grape);
+}
+
+[grad="pomegranite"]{
+    --grad-active: var(--grad-pomegranite);
+}
+
+[grad="grim"]{
+    --grad-active: var(--grad-grim);
+}
+
+[grad="bright-purple"]{
+    --grad-active: var(--grad-bright-purp);
+}
+
+
+/* Direction */
+[grad="candy-grape"][grad-dir="up"]{
+    background: var(--grad-candy-grape-bt);
+}
+
+[grad="candy-grape"][grad-dir="down"]{
+    background: var(--grad-candy-grape);
+}
+
+[grad="candy-grape"][grad-dir="left"]{
+    --grad-active: var(--grad-candy-grape-lr);
+}
+
+[grad="candy-grape"][grad-dir="right"]{
+    --grad-active: var(--grad-candy-grape-rl);
+}
+
+[grad="grape"][grad-dir="up"]{
+    background: var(--grad-grape-bt);
+}
+
+[grad="grape"][grad-dir="down"]{
     background: var(--grad-grape);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
-.bg\:grad\:down, .pomegranite {
-    background: var(--grad-pomegranite);
+[grad="pomegranite"][grad-dir="up"]{
+    background: var(--grad-pomegranite-top);
 }
+
 
 .text\:grad.pomegranite {
     background: var(--grad-pomegranite);
@@ -55,72 +103,4 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-}
-
-.bg\:grad\:down, .candy-grape {
-    background: var(--grad-candy-grape);
-}
-
-.bg\:grad\:up.grape {
-    background: var(--grad-grape-bt);
-}
-
-.bg\:grad.grim {
-    background: var(--grad-grim);
-}
-
-.text\:grad.grim {
-    background: var(--grad-grim);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
-.bg\:grad\:up, .pomegranite {
-    background: var(--grad-pomegranite-bt);  
-}
-
-.bg\:grad\:up.candy-grape {
-    background: var(--grad-candy-grape-bt);
-}
-
-.bg\:grad\:up.grape::before {
-    background: var(--grad-grape-bt);
-    transform: rotate(-180deg);
-}
-
-.bg\:grad\:up.pomegranite::before {
-    background: var(--grad-pomegranite-bt);
-    transform: rotate(-180deg);  
-}
-
-.bg\:grad\:up.candy-grape::before {
-    background: var(--grad-candy-grape-bt);
-    transform: rotate(-180deg);
-}
-
-.bg\:grad\:left.grape {
-    background: var(--grad-grape-lr);
-}
-
-.bg\:grad\:left.pomegranite {
-    background: var(--grad-pomegranite-lr);
-}
-
-.bg\:grad\:left.candy-grape {
-    background: var(--grad-candy-grape-lr);
-}
-
-.bg\:grad\:right.grape {
-    background: var(--grad-grape-rl);
-}
-
-.bg\:grad\:right.pomegranite {
-    background: var(--grad-pomegranite-rl);
-}
-
-.bg\:grad\:right.candy-grape {
-    background: var(--grad-candy-grape-rl);
 }

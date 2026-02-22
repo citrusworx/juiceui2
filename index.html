@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="./css/juice.css">
     <title>Juice2</title>
 </head>
-<body id="canvas" class="grad--grape[to-bot]" data-jc-theme="test">
+<body id="canvas" grad="candy-grape" grad-dir="up" animation="fall" data-jc-theme="test">
     <div class="w:full%">
         <nav class="flex h:5 w:100 bgc-green-400 justify:between justify-around px:rel:10">
-            <div><span>Logo Text</span></div>
+            <div><span size="lg" grad="electric-blue" animation="flow" text bold>Juice</span></div>
             <ul class="flex gap-2 items-center justify-center">
                 <li class="korolev-rounded text:md">Link</li>
                 <li class="korolev-rounded text:md">Link</li>
@@ -24,12 +24,12 @@
         <section class="container hero:dark" id="hero-container">
             <div class=" wrapper hero:content" id="text-box-wrapper">
                 <h2 class="text:xxxlg tc-black-200 p:rel:5">The Expressive, Extensive UI Library</h2>
-                <p class="text:md text:justify px:rel:2">
-                1   Get a complete UI-building library complete with components, logic, and easter eggs---behind no pay wall! Everything we develop for Juice2 is completely <strong>free to use</strong>.
+                <p class="text:md text:justify px:rel:2" bold capitalize>
+                Get a complete UI-building library complete with components, logic, and easter eggs---behind no pay wall! Everything we develop for Juice2 is completely <strong>free to use</strong>.
                 </p>
 
                 <div class="m:auto w:40% py:rel:2 fw:no-wrap">
-                    <button class="btn:flat rounded:md bgc-green-600 w:99% text:md h:99% korolev-rounded tc-black-700">Click Here</button>
+                    <button class="btn:flat text:md korolev-rounded tc-white-300 h:10 w:15" grad="slate-blue-500" animation="flow" rounded="sm">Click Here</button>
                 </div>
             </div>
         </section>
@@ -63,7 +63,7 @@
                         <h3 class="">Server Size</h3>
                         <select title="server-options" id="server-select">
                             <optgroup label="Servers" id="server-options">
-                                <option value="">Pick a Server</option>
+                                <option value="" disabled selected>Pick a Server</option>
                                 <option value="small">Starter Server</option>
                                 <option value="medium">Medium Server</option>
                                 <option value="large">Large Server</option>
@@ -124,7 +124,7 @@
             </div>
         </section>
         <div class="row">
-            <div class="col bgc-green-400">
+            <div class="col bgc-red-900">
                 <p>Data One</p>
                 <fas-icon
                     lib="solid"
@@ -132,7 +132,7 @@
                     color="icon:red-400"
                     class="icon:md :hover-red-200"></fas-icon>
             </div>
-            <div class="col bgc-blue-400">
+            <div class="col bgc-green-400">
                 <p>Data Two</p>
             </div>
         </div>
