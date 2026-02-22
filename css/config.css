@@ -29,7 +29,7 @@
 @import url('tablet/tablet.css'); /* Responsive Library 3 of 3 */
 
 html, body {
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 

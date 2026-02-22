@@ -63,10 +63,20 @@
 }
 
 /* Gradient Base Styles */
+
+body[grad]{
+  isolation: isolate;
+}
+
 [grad]{
-  display: inline-block;
-  position: relative;
-  z-index: 0;
+    /* display: inline-block; */
+    position: relative;
+    z-index: 0;
+    /* background-size: cover; */
+}
+
+[grad]:not([text]){
+    position: relative;
 }
 
 [grad][text]{
@@ -85,37 +95,31 @@
     border-radius: inherit;
     inset: 0;
     z-index: -1;
-    background-repeat: no-repeat;
-    background: var(--grad-active);
     border-radius: inherit;
+    background-image: var(--grad-active);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-/* [grad]::before {
-  content: "";
-  position: absolute;
-  border-radius: inherit;
+body[grad]:not([text])::before{
+  background-size: 100% 100%;
+}
+
+body[grad]:not([text])::before{
+  position: fixed;
   inset: 0;
   z-index: -1;
+  pointer-events: none;
+  border-radius: 0;
 
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background: var(--grad-active);
-} */
-
-button[grad]::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* background-size: cover; */
-  background-repeat: no-repeat;
-  background: var(--grad-active);
-}
-
-body[grad]::before {
-  position: fixed;
+  background-position: center;
 }
 
 /* Animation */
-[animation="flow"]::before{
+[grad]:not([text])[animation="flow"]::before{
     background-size: 300% 100%;
     animation: gradShiftX 3s linear infinite;
 }
@@ -131,7 +135,7 @@ button[grad]:not([text])[animation="flow"]::before{
 }
 
 
-[animation="fall"]::before{
+body[grad]:not([text])[animation="fall"]::before{
     background-size: 300% 300%;
     animation: gradShiftY 10s linear infinite;
 }

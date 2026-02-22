@@ -1,12 +1,12 @@
-.grid {
+.grid, [grid] {
     display: grid;
 }
 
-.il-grid {
+.il-grid, [grid][inline] {
     display: inline-grid;
 }
 
-.gtc-auto {
+.gtc-auto, [grid][col="auto"] {
     grid-template-columns: auto;
 }
 
@@ -42,7 +42,7 @@
 
 /* Single Row */
 
-.row {
+[grid][rows="2"] {
     grid-template-rows: 2fr;
 }
 
